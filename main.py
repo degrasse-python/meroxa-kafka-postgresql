@@ -17,8 +17,8 @@ def anonymize(records: RecordList) -> RecordList:
       # Hash the email
       # This payload may be delivered as a bytetype.
       # expect errors
-      payload["customer_email"] = hashlib.sha256(
-              payload["customer_email"].encode("utf-8")
+      payload["source"] = hashlib.sha256(
+              payload["source"].encode("utf-8")
                                     ).hexdigest()
 
       logging.info(f"output: {record}")
@@ -59,8 +59,8 @@ class App:
       # Specify which secrets in environment variables should be passed
       # into the Process.
       # Replace 'PWD' with the name of the environment variable.
-      turbine.register_secrets("CCLOUD_USERNAME")
-      turbine.register_secrets("CCLOUD_PASSWORD")
+      turbine.register_secrets("MYSQL_USER")
+      turbine.register_secrets("MYSQL_PASS")
       
       # Specify what code to execute against upstream records
       # with the `process` function.
