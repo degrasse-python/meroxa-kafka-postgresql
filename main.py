@@ -52,9 +52,9 @@ class App:
       
       ### Kafka Topics
       
-      records = await source.records("queueing.transactions", {})
+      #records = await source.records("queueing.transactions", {})
       records = await source.records("streaming.transactions.legit", {})
-      records = await source.records("streaming.transactions.fraud", {})
+      #records = await source.records("streaming.transactions.fraud", {})
 
       # Specify which secrets in environment variables should be passed
       # into the Process.
