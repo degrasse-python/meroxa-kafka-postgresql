@@ -1,0 +1,8 @@
+
+create table kafka_legittransactions_backup(
+   legittransactions_id INT NOT NULL AUTO_INCREMENT,
+   source VARCHAR(100) NOT NULL,
+   target VARCHAR(100) NOT NULL,
+   amount FLOAT,
+   PRIMARY KEY ( legittransactions_id )
+);

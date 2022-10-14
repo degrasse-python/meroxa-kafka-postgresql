@@ -1,0 +1,8 @@
+# All Kafka exports
+export KARAFKA_BROKERS=kafka-756e217-bucoyas-d485.aivencloud.com:24256
+export CLOUDKARAFKA_USERNAME=avnadmin
+export CLOUDKARAFKA_PASSWORD=AVNS_p44xLzBwdl2BlgGT2vh
+export LEGIT_TOPIC=streaming.transactions.legit
+export FRAUD_TOPIC=streaming.transactions.fraud
+export TRANSACTIONS_TOPIC=queueing.transactions
+export TRANSACTIONS_PER_SECOND=1000

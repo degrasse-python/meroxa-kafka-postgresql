@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+
+  generator:
+    build: ./kafka
+    environment:
+      KAFKA_BROKER_URL: broker:9092
+      TRANSACTIONS_TOPIC: queueing.transactions
+      LEGIT_TOPIC: streaming.transactions.legit
+      FRAUD_TOPIC: streaming.transactions.fraud
+      KARAFKA_BROKERS: kafka-756e217-bucoyas-d485.aivencloud.com:24256
+      KARAFKA_USERNAME: avnadmin
+      KARAFKA_PASSWORD: AVNS_p44xLzBwdl2BlgGT2vh
+      TRANSACTIONS_PER_SECOND: 1000
+
+networks:
+  default:
+    name: kafka-network
