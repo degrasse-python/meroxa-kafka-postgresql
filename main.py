@@ -3,6 +3,7 @@ import logging
 import sys
 import os
 
+import json
 from turbine.runtime import RecordList, Runtime
 
 logging.basicConfig(level=logging.INFO)
@@ -13,7 +14,8 @@ def anonymize(records: RecordList) -> RecordList:
     logging.info(f"input: {record}")
     try:
       payload = record.value["payload"]
-
+      print(payload)
+      print(json.load(payload))
       # Hash the email
       # This payload may be delivered as a bytetype.
       # expect errors
